@@ -1,0 +1,32 @@
+{
+    "squares":[
+     { "text":   "All In" , "selected": false},
+     { "text":   "JD's kids being precocious" , "selected": false},
+     { "text":   "JD's kids misbehaving" , "selected": false},
+     { "text":   "The Early Church" , "selected": false},
+     { "text":   "JD calls Tim Keller his friend" , "selected": false},
+     { "text":   "Charles Spurgeon" , "selected": false},
+     { "text":   "JD on an airplane" , "selected": false},
+     { "text":   "JD talks about being prideful" , "selected": false},
+     { "text":   "Sex" , "selected": false},
+     { "text":   "1000 Church Plants" , "selected": false},
+     { "text":   "Jack Bauer" , "selected": false},
+     { "text":   "There's a guest speaker" , "selected": false},
+     { "text":   "JD's wearing skinny jeans" , "selected": false},
+     { "text":   "JD mentions his book(s)" , "selected": false},
+     { "text":   "Duke/UNC mentioned" , "selected": false},
+     { "text":   "Awful Christian Merchandise Pun" , "selected": false},
+     { "text":   "Story about somebody giving out tracts" , "selected": false},
+     { "text":   "Starbucks Mentioned" , "selected": false},
+     { "text":   "Jesus was in a small group" , "selected": false},
+     { "text":   "JD says he's plagiarizing Tim Keller" , "selected": false},
+     { "text":   "JD " , "selected": false},
+     { "text":   "JD mentions his book(s)" , "selected": false},
+     { "text":   "Duke/UNC mentioned" , "selected": false},
+     { "text":   "Awful Christian Merchandise Pun" , "selected": false},
+     { "text":   "Story about somebody giving out tracts" , "selected": false} 
+           
+        
+    ]
+
+}

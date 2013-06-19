@@ -1,0 +1,27 @@
+<html>
+    <head>
+       <title>Summit Church Bingo</title>
+       <link rel="stylesheet" type="text/css" href="css/bingo.css">
+    </head>
+    <body ng-app>
+        <div id="header">
+            <h2>Summit Church Bingo</h2>
+            <p ng-model="description"> 
+                For all of you who spend your weekend frequenting the Summit Church. 
+            </p> 
+        </div>
+        <div id="bingoarea" ng-controller="BoardCtrl">
+        <ul id="bingoboard" >
+           <li ng-repeat="square in squares">
+            <span class="selected-{{square.selected}}">{{square.text}}</span>
+           </li>
+           
+        </ul>
+    </div>
+    <div id="footer">
+        <p>Created by Ben McCormick, 2013</p>
+    </div>
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/bingo.js"></script>
+    </body>
+</html>
