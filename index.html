@@ -1,13 +1,18 @@
 <html>
     <head>
        <title>Summit Church Bingo</title>
+
+        <script type="text/javascript" src="js/lib/angular.min.js"></script>
+        <script type="text/javascript" src="js/bingo.js"></script>
        <link rel="stylesheet" type="text/css" href="css/bingo.css">
     </head>
     <body ng-app>
         <div id="header">
             <h2>Summit Church Bingo</h2>
             <p ng-model="description"> 
-                For all of you who spend your weekend frequenting the Summit Church. 
+                For all of you who spend your weekend frequenting the Summit Church, this is a light-hearted game of bingo.  See if you can 
+                get Bingo by matching the following phrases and occurences during
+                this weeks sermon.
             </p> 
         </div>
         <div id="bingoarea" ng-controller="BoardCtrl">
@@ -20,8 +25,9 @@
     </div>
     <div id="footer">
         <p>Created by Ben McCormick, 2013</p>
+        <p>Not Afilliated with The Summit Church.  Anything offensive here 
+        (other than the gospel) is most likely due to me and does not represent
+        the position of The Summit Church</p>
     </div>
-    <script type="text/javascript" src="js/lib/angular.min.js"></script>
-    <script type="text/javascript" src="js/bingo.js"></script>
     </body>
 </html>

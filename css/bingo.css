@@ -5,4 +5,5 @@ body{background:#63b3b8;font:22px/28px Helvetica,Arial,sans-serif}
 #bingoarea{width:100%;background-color:#dc563e;height:1000px;display:block;overflow:hidden}
 #bingoboard{width:900px;display:block;margin:50px auto 50px auto;background-color:#dc563e}
 #bingoboard li{display:block;width:160px;margin:5px;padding:5px;border-radius:5px;height:160px;font:22px/28px Helvetica,Arial,sans-serif;background-color:#3e4243;color:#fff;float:left;text-align:center;display:-ms-flexbox;-ms-flex-pack:center;-ms-flex-align:center;display:-moz-box;-moz-box-pack:center;-moz-box-align:center;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;display:box;box-pack:center;box-align:center}
-#footer{display:block;width:100%;height:24px;background-color:#3e4243;color:#fff}
+#footer{display:block;width:100%;height:200px;background-color:#3e4243;color:#fff;padding-top:10px}
+#footer p{margin:10px}
