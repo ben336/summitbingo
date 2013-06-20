@@ -1,6 +1,9 @@
 freespace =
   text: "Gospel is Presented"
   selected: true
+  isFreeSquare:true
+
+possibilities = []
 
 window.BoardCtrl = ($scope, $http) ->
   $http.get('squares.json').success (data) ->
@@ -8,6 +11,17 @@ window.BoardCtrl = ($scope, $http) ->
     squares = squares.slice 0, 24
     squares.splice 12, 0, freespace
     $scope.squares = squares
+
+    $scope.toggle = (square) ->
+      square.selected = !square.selected;
+
+    $scope.isBingo = () ->
+      possibilities.some( (possibility)-> 
+        isMatch = isBingoMatch(possibility,squares) 
+        if isMatch then fillspots(possibility,squares)
+        )
+
+
     undefined
 
 
@@ -25,3 +39,9 @@ fisherYates = (arr) ->
         arr[i] = tempj
         arr[j] = tempi
     return arr
+
+#checks to see if all the squares in a set are selected
+isBingoMatch = (set,board) ->
+  set.every( (item) -> board[item].selected )
+
+fillspots

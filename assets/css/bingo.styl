@@ -9,7 +9,7 @@ $helv = Helvetica, Arial, sans-serif
 
 
 body
-  background: #63B3B8
+  background: #167E92
   font: 22px / 28px $helv
 
 
@@ -34,7 +34,7 @@ body
   width:900px
   display:block
   margin:50px auto 50px auto;
-  background-color:#DC563E
+  background-color: #D60017
 
 #bingoboard li
   display:block
@@ -79,4 +79,16 @@ body
 #footer p
   margin: 10px
 
+#bingoboard li.selected-true
+  //background-color: #2C3283
+  background-image: url("../img/summit.png")
+  //color: #3E4243
 
+#bingoboard li.selected-true span
+  display:none
+
+#bingoboard li.freesquare-true
+  background-image:url("../img/freespace.png")
+
+#bingoboard li.freesquare-true span
+  display:inline

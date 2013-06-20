@@ -16,11 +16,14 @@
             </p> 
         </div>
         <div id="bingoarea" ng-controller="BoardCtrl">
+        
         <ul id="bingoboard" >
-           <li ng-repeat="square in squares">
-            <span class="selected-{{square.selected}}">{{square.text}}</span>
+           <li ng-repeat="square in squares" ng-click="toggle(square)" class="selected-{{square.selected}}
+           bingo-{{isBingo()}}
+           freesquare-{{square.isFreeSquare}}
+           bingosquare-{{square.bingo}}">
+            <span>{{square.text}}</span>
            </li>
-           
         </ul>
     </div>
     <div id="footer">

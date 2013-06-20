@@ -1,10 +1,13 @@
 (function() {
-  var fisherYates, freespace;
+  var fisherYates, freespace, isBingoMatch, possibilities;
 
   freespace = {
     text: "Gospel is Presented",
-    selected: true
+    selected: true,
+    isFreeSquare: true
   };
+
+  possibilities = [];
 
   window.BoardCtrl = function($scope, $http) {
     return $http.get('squares.json').success(function(data) {
@@ -13,6 +16,18 @@
       squares = squares.slice(0, 24);
       squares.splice(12, 0, freespace);
       $scope.squares = squares;
+      $scope.toggle = function(square) {
+        return square.selected = !square.selected;
+      };
+      $scope.isBingo = function() {
+        return possibilities.some(function(possibility) {
+          var isMatch;
+          isMatch = isBingoMatch(possibility, squares);
+          if (isMatch) {
+            return fillspots(possibility, squares);
+          }
+        });
+      };
       return void 0;
     });
   };
@@ -32,5 +47,13 @@
     }
     return arr;
   };
+
+  isBingoMatch = function(set, board) {
+    return set.every(function(item) {
+      return board[item].selected;
+    });
+  };
+
+  fillspots;
 
 }).call(this);
