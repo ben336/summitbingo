@@ -20,11 +20,11 @@
      { "text":   "Starbucks Mentioned" , "selected": false},
      { "text":   "Jesus was in a small group" , "selected": false},
      { "text":   "JD says he's plagiarizing Tim Keller" , "selected": false},
-     { "text":   "JD " , "selected": false},
-     { "text":   "JD mentions his book(s)" , "selected": false},
-     { "text":   "Duke/UNC mentioned" , "selected": false},
+     { "text":   "JD mentions his \"smoking hot wife\" " , "selected": false},
+     { "text":   "HOPUD" , "selected": false},
+     { "text":   "Mentions Pentecostal or Mormonization of Summit Church" , "selected": false},
      { "text":   "Awful Christian Merchandise Pun" , "selected": false},
-     { "text":   "Story about somebody giving out tracts" , "selected": false} 
+     { "text":   "Joke about college student offerings" , "selected": false} 
            
         
     ]

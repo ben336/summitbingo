@@ -9,17 +9,21 @@
     <body ng-app>
         <div id="header">
             <h2>Summit Church Bingo</h2>
-            <p ng-model="description"> 
-                For all of you who spend your weekend frequenting the Summit Church, this is a light-hearted game of bingo.  See if you can 
-                get Bingo by matching the following phrases and occurences during
-                this weeks sermon.
-            </p> 
+            <div id="description"> 
+            <p>
+                This is a light-hearted game of Bingo for anyone who spends their weekends at the Summit Church in the Research Triangle of North Carolina. Try and see if you can achieve a bingo by watching for the following phrases and occurrences during the course of this week's sermon.
+            
+            </p><p>
+                 
+                Please note that this does not count as "taking notes". It also will probably add very little spiritual enrichment. It may however allow us to laugh together. Play responsibly.
+            </p>
+            </div> 
         </div>
-        <div id="bingoarea" ng-controller="BoardCtrl">
+        <div id="bingoarea" ng-controller="BoardCtrl" 
+          class="bingo-{{isBingo()}}" >
         
-        <ul id="bingoboard" >
+        <ul id="bingoboard" class="hidden">
            <li ng-repeat="square in squares" ng-click="toggle(square)" class="selected-{{square.selected}}
-           bingo-{{isBingo()}}
            freesquare-{{square.isFreeSquare}}
            bingosquare-{{square.bingo}}">
             <span>{{square.text}}</span>
@@ -27,10 +31,12 @@
         </ul>
     </div>
     <div id="footer">
-        <p>Created by Ben McCormick, 2013</p>
-        <p>Not Afilliated with The Summit Church.  Anything offensive here 
-        (other than the gospel) is most likely due to me and does not represent
-        the position of The Summit Church</p>
+    
+        <p>This site is not affiliated with The Summit Church.  
+        Anything offensive or confusing here (other than the Gospel) is most likely due to me and does not represent the opinions of The Summit Church, its pastors, or employees.</p>
+        <p>If you have suggestions for improvements to this game, or more content for the bingo boards, feel free to let me know via twitter at 
+        <a href="https://twitter.com/ben336">@ben336</a>.  Please keep suggestions clean, funny, and appropriate. When in doubt, aim to fear God, respect the church, and love people.</p>
+        <p class="tagline">Created by Ben McCormick, 2013</p>
     </div>
     </body>
 </html>

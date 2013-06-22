@@ -20,17 +20,27 @@ module.exports = function(grunt) {
         }
       }
     },
+    uglify: {
+      options: {
+        mangle:false
+      },
+      my_target: {
+        files: {
+          'js/bingo.js': ['js/bingo.src.js']
+        }
+      }
+    },
     coffee: {
       compile: {
         files: {
-        'js/bingo.js': 'assets/js/bingo.coffee', // 1:1 compile
+        'js/bingo.src.js': 'assets/js/bingo.coffee', // 1:1 compile
         }
       }
     },
     watch: {
       scripts: {
         files: ["assets/css/**/*.styl","assets/js/**/*.coffee"],
-        tasks: ["stylus","coffee"],
+        tasks: ["stylus","coffee","uglify"],
         options: {
           nospawn: true
         }
@@ -40,6 +50,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-stylus");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks('grunt-contrib-coffee');
-
-  grunt.registerTask("default", ["stylus","coffee"]);
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask("default", ["stylus","coffee","uglify"]);
 };
