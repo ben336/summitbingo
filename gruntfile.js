@@ -7,12 +7,20 @@ Unfortunately, it also doesn"t get along well with dox our documentation
 engine, because dox doesn"t handle comment like syntax in strings
 very well, and chokes on it.
 */
+var banner = '\n/*\n<%= pkg.name %> - v<%= pkg.version %> - ' +
+        '<%= grunt.template.today("yyyy-mm-dd") %> \n' +
+        'Created with Care by Ben McCormick\n'+
+        'Feel free to check out the source or' +
+        ' contribute at \nhttps://github.com/ben336/summitbingo\n*/\n';
+
 
 module.exports = function(grunt) {
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     stylus: {
       compile: {
         options: {
+          banner:banner,
           paths: ["assets/css/**/*.styl"],
         },
         files: {
@@ -22,7 +30,9 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        mangle:false
+        mangle:false,
+        banner: banner
+
       },
       my_target: {
         files: {
