@@ -8,6 +8,6 @@ If you have suggestions for improvements to this game, or more content for the b
 
 ## For Developers
 
-If you want to add something to the bingo game, feel free to fork the project and make a pull request, or open an issue.  The code is written in coffeescript and stylus for the js and stylus respectively.
+If you want to add something to the bingo game, feel free to fork the project and make a pull request, or open an issue.  The code is written in coffeescript and stylus for the js and css respectively.
 
 There's a grunt task to automate building the project, but you can also manually build the projects using the respective compilers for stylus and coffeescript.  Feel free to get in touch with me if you have any issues.
