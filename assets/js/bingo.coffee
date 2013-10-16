@@ -1,3 +1,5 @@
+#Set Up the data objects representing the free space and winning options
+
 freespace =
   text: "Gospel is Presented"
   selected: true
@@ -18,6 +20,7 @@ possibilities = [
   [20,16,12,8,4]
 ]
 
+# Define the controller for the board.  Handles the game logic
 window.BoardCtrl = ($scope, $http) ->
   $http.get('squares.json').success (data) ->
     squares =  fisherYates data.squares
@@ -37,11 +40,8 @@ window.BoardCtrl = ($scope, $http) ->
 
     board = document.getElementById "bingoboard"
     board.className = ""
-
-
+    # return undefined
     undefined
-
-
 
 # Borrowed from: https://gist.github.com/ddgromit/859699
 # Randomizes the order of elements in the passed in array in place.
@@ -62,7 +62,7 @@ isBingoMatch = (set,board) ->
   set.every (item) -> 
     board[item].selected or board[item].isFreeSquare
 
-
+# fill the spots on the board if they're part of a bingo
 fillspots = (possibility,squares) ->
   for squarevalue in possibility
     square = squares[squarevalue]
